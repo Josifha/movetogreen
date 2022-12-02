@@ -8,6 +8,7 @@ import './index.css';
 import App from './App';
 //import GlobalStyle from './theme/globalStyles'
 import reportWebVitals from './reportWebVitals';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 ReactDOM.render(
   <React.StrictMode>

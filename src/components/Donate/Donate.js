@@ -98,7 +98,7 @@ export default function Donate() {
             <Form.Group className="mb-3" controlId="formBasicCheckbox">
               <Form.Check type="checkbox" label="I accept terms and conditions"/>
             </Form.Group>
-            <Button variant="primary" type="submit">Donate Now</Button>
+            <Button variant="primary" type="submit"><i className='fas fa-tree'></i>&nbsp;&nbsp;Donate Now</Button>
           </Form>
         </div>       
       </div>
