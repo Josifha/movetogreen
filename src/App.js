@@ -7,10 +7,9 @@ import  Checkout from './Checkout';
 import { BrowserRouter as Router, Route,Routes} from "react-router-dom";
 import Home from './Home';
 import Login from './Login';
+import Donate from './components/Donate/Donate';
 import SignIn from './SignIn';
 import Slider from './slider';
-
-
 
 function App() {
   return (
@@ -31,8 +30,10 @@ function App() {
             <Route exact path='/SignIn' element={<SignIn/>} />
 
             <Route exact path='/Slider' element={<Slider/>} />
+
+            <Route exact path='/Donate' element={<Donate/>} />
           
-            </Routes>
+          </Routes>
     <Slider/>
         
     </div>
