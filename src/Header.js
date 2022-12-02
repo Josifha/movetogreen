@@ -18,7 +18,12 @@ export default function Header() {
                <div className='header__option'>
                    <span className='header__optionLinetw'>ABOUT</span>      
               </div>
-
+              
+               <Link to ='/Donate'>
+                    <div className='header__option'>
+                         <span className='header__optionLinetw'>DONATE NOW</span>      
+                    </div>
+               </Link>
              
                <div className='header__option'>
                     <span className='header__optionLinetw'>PLANT DETAILS</span>   
