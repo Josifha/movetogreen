@@ -11,9 +11,9 @@ export default function Donate() {
   const [email, setEmail] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
   const [treesPackage, setTreesPackage] = useState("Select a Package");
+  const [amount, setAmount] = useState("");
   const [occasions, setOccasions] = useState("Select Occasions");
   const [otherOccasion, setOtherOccasion] = useState("");
-  const [amount, setAmount] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -50,16 +50,15 @@ export default function Donate() {
           <h6>Help Us Plant A tree</h6>
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="name">
-              <Form.Control type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)}/>
+              <Form.Control type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required/>
             </Form.Group>
             <Form.Group className="mb-3" controlId="email">
-              <Form.Control type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+              <Form.Control type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
             </Form.Group>
             <Form.Group className="mb-2" controlId="phoneNo">
-              <Form.Control type="text" placeholder="Phone No" value={phoneNo} onChange={(e) => setPhoneNo(e.target.value)}/>
+              <Form.Control type="text" placeholder="Phone No" value={phoneNo} onChange={(e) => setPhoneNo(e.target.value)} required/>
             </Form.Group>
-            <div class="empty-div"></div>
-            <Dropdown title={treesPackage} onSelect={handleTreesPackageChange}>
+            <Dropdown title={treesPackage} onSelect={handleTreesPackageChange} className = "pt-1">
               <Dropdown.Toggle variant="Success" id="dropdown-basic">
                   {treesPackage}
               </Dropdown.Toggle>
@@ -70,6 +69,9 @@ export default function Donate() {
                   <Dropdown.Item eventKey="1000 Trees">1000 Trees</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
+            <Form.Group className="mb-3" controlId="amount">
+              <Form.Control readOnly type="text" placeholder="Amount" value={amount} onChange={(e) => setAmount(e.target.value)}/>
+            </Form.Group>
             <Dropdown title={occasions} onSelect={handleOccasionsChange}>
               <Dropdown.Toggle variant="Success" id="dropdown-basic">
                   {occasions}
@@ -91,12 +93,13 @@ export default function Donate() {
                 <Form.Control type="text" placeholder="Other Occasion" value={otherOccasion} onChange={(e) => setOtherOccasion(e.target.value)}/>
               </Form.Group>
             </div>
-            <Form.Group className="mb-3" controlId="amount">
-              <Form.Control readOnly type="text" placeholder="Amount" value={amount} onChange={(e) => setAmount(e.target.value)}/>
-            </Form.Group>
             <div class="empty-div"></div>
-            <Form.Group className="mb-3" controlId="formBasicCheckbox">
-              <Form.Check type="checkbox" label="I accept terms and conditions"/>
+            <Form.Group className="mb-3" controlId="conditions-checkbox">
+              <Form.Check>
+                <Form.Check.Input required />
+                <Form.Check.Label>I accept terms and conditions</Form.Check.Label>
+                <Form.Control.Feedback type="invalid">You must agree before submitting.</Form.Control.Feedback>
+              </Form.Check>
             </Form.Group>
             <Button variant="primary" type="submit"><i className='fas fa-tree'></i>&nbsp;&nbsp;Donate Now</Button>
           </Form>
