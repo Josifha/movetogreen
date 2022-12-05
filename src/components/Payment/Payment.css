@@ -1,21 +1,21 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
-.donate-page {
+.payment-page {
   width: 1500px;
   padding: 2% 0 0;
   margin: auto;
 }
-.form {
+.payment-form {
   position: relative;
   z-index: 1;
   background: #FFFFFF;
-  max-width: 360px;
+  max-width: 600px;
   margin: 0 auto 100px;
   padding: 45px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
-.form input:not[type ='checkbox']{
+.payment-form input:not[type ='checkbox']{
   font-family: "Roboto", sans-serif;
   outline: 0;
   background: #f2f2f2;
@@ -26,7 +26,7 @@
   box-sizing: border-box;
   font-size: 14px;
 }
-.form button {
+.payment-form button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
@@ -40,11 +40,11 @@
   transition: all 0.3 ease;
   cursor: pointer;
 }
-.form button:hover,.form button:active,.form button:focus {
+.payment-form button:hover,.form button:active,.form button:focus {
   background: #4CAF50;
 }
 
-.form a:hover {
+.payment-form a:hover {
   background-color: #4CAF50;
   font-family: "Roboto", sans-serif;
 }
@@ -55,6 +55,16 @@
 
 .empty-div {
   padding: 18px;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  background-color: #4CAF50;
+  color: #FFFFFF;
+}
+
+.nav-tabs .nav-link {
+  color: #4CAF50;
+  border-color: #4CAF50;
 }
 
 h4 {
@@ -71,7 +81,7 @@ h6 {
   padding: 15px;
 }
 
-.form-check-input:checked {
+.payment-form-check-input:checked {
   background-color: #4CAF50;
   border-color: #4CAF50;
 }
