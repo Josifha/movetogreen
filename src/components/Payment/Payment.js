@@ -68,14 +68,14 @@ export default function Payment() {
                       <Form.Group as={Row} className="mb-3" controlId="creditCardOwnerName">
                         <Form.Label column sm={4}>Card Owner</Form.Label>
                           <Col sm={5}>
-                            <Form.Control type="text" placeholder="Card Owner Name" value={creditCardOwnerName} onChange={(e) => setCreditCardOwnerName(e.target.value)}/>
+                            <Form.Control type="text" placeholder="Card Owner Name" value={creditCardOwnerName} onChange={(e) => setCreditCardOwnerName(e.target.value)} required/>
                           </Col>
                         </Form.Group>
                         <Form.Group as={Row} className="mb-3" controlId="creditCardNumber">
                           <Form.Label column sm={4}>Card Number</Form.Label>
                           <Col sm={8}>
                             <InputGroup>
-                              <Form.Control type="text" placeholder="Vaiid Card Number" value={creditCardNumber} onChange={(e) => setCreditCardNumber(e.target.value)}/>
+                              <Form.Control type="text" placeholder="Vaiid Card Number" value={creditCardNumber} onChange={(e) => setCreditCardNumber(e.target.value)} required/>
                               <div>
                                 <i class="fab fa-cc-visa mx-1"></i> 
                                 <i class="fab fa-cc-mastercard mx-1"></i> 
@@ -88,15 +88,15 @@ export default function Payment() {
                           <Form.Label column sm={4}>Expiration Date</Form.Label>
                           <Col sm={5}>
                             <InputGroup>
-                              <Form.Control type="number" placeholder="MM" value={creditCardMonth} onChange={(e) => setCreditCardMonth(e.target.value)}/>
-                              <Form.Control type="number" placeholder="YY" value={creditCardYear} onChange={(e) => setCreditCardYear(e.target.value)}/>
+                              <Form.Control type="number" placeholder="MM" value={creditCardMonth} onChange={(e) => setCreditCardMonth(e.target.value)} required/>
+                              <Form.Control type="number" placeholder="YY" value={creditCardYear} onChange={(e) => setCreditCardYear(e.target.value)} required/>
                             </InputGroup>
                           </Col>
                         </Form.Group>
                         <Form.Group as={Row} className="mb-3" controlId="creditCardCVV">
                           <Form.Label column sm={4}>CVV</Form.Label>
                           <Col sm={5}>
-                            <Form.Control type="text" value={creditCardCVV} onChange={(e) => setCreditCardCVV(e.target.value)}/>
+                            <Form.Control type="text" value={creditCardCVV} onChange={(e) => setCreditCardCVV(e.target.value)} required/>
                           </Col>
                         </Form.Group>
                         <Button variant="primary" type="submit">Submit</Button>

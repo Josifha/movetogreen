@@ -1,7 +1,7 @@
 .App {
     position: relative;
     text-align: center;
-    background-image: linear-gradient(to right,white,#0aa091);
+    background-image: linear-gradient(to right,white, #43A047);
   }
 .form{
     position: relative;
