@@ -1,79 +1,137 @@
 import React from 'react'
 import './Home.css'
-import Product from './Product';
-import Bial from './BIAL.png'
-import Flight from './Flight.png'
-import food from './food.png'
-import cab from './cab.png'
-import shop from './shop.png'
-import shoppy from './shoppy.jpg'
-import Slider from './slider';
-import {Link} from "react-router-dom";
-
-import Divider from '@mui/material/Divider';
-import Paper from '@mui/material/Paper';
-import Stack from '@mui/material/Stack';
-import { styled } from '@mui/material/styles';
-// for slider
-
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
-
+import { useState } from 'react';
+import Carousel from 'react-bootstrap/Carousel';
+import Card from 'react-bootstrap/Card';
+import CardGroup from 'react-bootstrap/CardGroup';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 function Home(){
-    
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
     return(
         
         <div className='home'>
           <div className='home_container'>
-            
-            <img className='home_image' src={Bial} alt=""/>
-            
-            
-           <div className='home_row row1'>
-         
-            <Product title="Number palamts" image={Flight} />
+            <div>
+          <Carousel activeIndex={index} onSelect={handleSelect}>
+        <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="https://www.greentnmission.com/webAssets/images/banner/banner1.jpg"
+          alt="First slide"
+        />
+        <Carousel.Caption>
+          <h3>Save your planet</h3>
+          <button>Plant a Tree</button>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="https://www.greentnmission.com/webAssets/images/banner/banner2.jpg"
+          alt="Second slide"
+        />
 
-            <Product title="" image={food} />
-           
-            <Product title="CAB BOOKING & NEARBY DESTINATION PLAN" image={cab} />
-            
-            <Product title="FASHION EXPO 2022" image={shop} />
-           </div>
+        <Carousel.Caption>
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="https://www.greentnmission.com/webAssets/images/banner/banner3.jpg"
+          alt="Third slide"
+        />
 
-           <div className='news'>
+        <Carousel.Caption>
+          <h3>Third slide label</h3>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+       
+       </div>
+       <div className='news'>
              <div className='IN'>
-                        <h1>COVID GUIDELINES</h1>
-                        <p><b>Health Screening:</b></p>
+             <CardGroup>
+      <Card>
+        <Card.Img variant="top" src="holder.js/100px160" />
+        <Card.Body>
+          <Card.Title>Card title</Card.Title>
+          <Card.Text>
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This content is a little bit longer.
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer>
+      </Card>
+      <Card>
+        <Card.Img variant="top" src="holder.js/100px160" />
+        <Card.Body>
+          <Card.Title>Card title</Card.Title>
+          <Card.Text>
+            This card has supporting text below as a natural lead-in to
+            additional content.{' '}
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer>
+      </Card>
+      <Card>
+        <Card.Img variant="top" src="holder.js/100px160" />
+        <Card.Body>
+          <Card.Title>Card title</Card.Title>
+          <Card.Text>
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This card has even longer content than the
+            first to show that equal height action.
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer>
+      </Card>
+      <Card>
+        <Card.Img variant="top" src="holder.js/100px160" />
+        <Card.Body>
+          <Card.Title>Card title</Card.Title>
+          <Card.Text>
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This card has even longer content than the
+            first to show that equal height action.
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer>
+      </Card>
+    </CardGroup>
+              </div>
+              </div>
 
-                         <p>In view of the surge in number of COVID-19 cases, random sample collection will be done for passengers arriving from states where there has been a spurt in number for COVID-19 cases. Passengers will be allowed to exit after sample collection.</p> 
+              <div className='results'>
+             <div className='IN'>
 
-                          <p>Thermal screening will be done for all passengers upon arrival.</p>
-
-                          <p>If you are travelling on a connecting flight and not leaving the airport in transit station then please refer to the detailed guidelines of the respective final destination arrival state</p>
-
-                         <p><b>Quarantine:</b></p> 
-
-                          <p>Passengers who are found positive will be quarantined at home or CCC/CHC/Hospital for 10 days.</p>
-
-                          <p><b>Passenger Obligation: </b></p>
-
-                          <p>Passengers are required to be in possession of RT-PCR negative certificate of not older than 72Hours else under testing on arrival free of cost </p>
-           
 
              </div>
-            
-            </div>
-
-        
-       </div>
-     
+              </div>
+             
+              </div>
+             
 </div>
+
       
     );
 }
