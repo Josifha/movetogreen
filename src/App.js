@@ -29,13 +29,10 @@ function App() {
 
             <Route exact path='/SignIn' element={<SignIn/>} />
 
-            <Route exact path='/Slider' element={<Slider/>} />
-
             <Route exact path='/Donate' element={<Donate/>} />
           
           </Routes>
-    <Slider/>
-        
+   
     </div>
 </Router>
   );

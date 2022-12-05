@@ -7,7 +7,7 @@ function Product({title,image,cart}) {
           
             <div className="product_info ">
          
-               <p><b>{title}</b></p>
+            <p><b>{title}</b></p>
             </div>
             <img src={image} alt=""/>
             <button>Explore Now</button>

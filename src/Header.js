@@ -46,13 +46,6 @@ export default function Header() {
                   </div>
                </Link>
 
-               
-                  <div className='header__option'>
-                     <span className='header__optionLinetw'>product</span>
-                     <a href = "demo.html">hello</a>
-                  </div>
-              
-
              <div className='header__option'>  
                   <span className='header__optionLinetw'><ForumIcon /></span>
              </div>
