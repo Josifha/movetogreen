@@ -1,7 +1,8 @@
 import $ from 'jquery';
 import React from 'react';
 import { useState } from "react";
-import { Button, Form, Dropdown} from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+import { Button, Form, Dropdown, Row, Col, InputGroup} from 'react-bootstrap';
 
 import './Donate.css';
 
@@ -11,12 +12,27 @@ export default function Donate() {
   const [email, setEmail] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
   const [treesPackage, setTreesPackage] = useState("Select a Package");
-  const [amount, setAmount] = useState("");
+  const [amount, setAmount] = useState(0);
   const [occasions, setOccasions] = useState("Select Occasions");
   const [otherOccasion, setOtherOccasion] = useState("");
 
+  const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    navigate('/Payment', 
+             {state: 
+              {
+               name: {name},
+               email: {email},
+               phoneNo: {phoneNo},
+               treesPackage: {treesPackage},
+               amount: {amount},
+               occasions: {occasions},
+               otherOccasion: {otherOccasion}
+              }
+             }
+    ); 
   };
 
   const handleTreesPackageChange =  eventKey => {
@@ -69,9 +85,6 @@ export default function Donate() {
                   <Dropdown.Item eventKey="1000 Trees">1000 Trees</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
-            <Form.Group className="mb-3" controlId="amount">
-              <Form.Control readOnly type="text" placeholder="Amount" value={amount} onChange={(e) => setAmount(e.target.value)}/>
-            </Form.Group>
             <Dropdown title={occasions} onSelect={handleOccasionsChange}>
               <Dropdown.Toggle variant="Success" id="dropdown-basic">
                   {occasions}
@@ -93,6 +106,12 @@ export default function Donate() {
                 <Form.Control type="text" placeholder="Other Occasion" value={otherOccasion} onChange={(e) => setOtherOccasion(e.target.value)}/>
               </Form.Group>
             </div>
+            <Form.Group className="mb-3" controlId="amount">
+              <InputGroup>
+                <Form.Label column sm={4}>Amount</Form.Label>
+                <Form.Control readOnly type="text" placeholder="Amount" value={amount} onChange={(e) => setAmount(e.target.value)}/>
+              </InputGroup>
+            </Form.Group>
             <div class="empty-div"></div>
             <Form.Group className="mb-3" controlId="conditions-checkbox">
               <Form.Check>

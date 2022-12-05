@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route,Routes} from "react-router-dom";
 import Home from './Home';
 import Login from './Login';
 import Donate from './components/Donate/Donate';
+import Payment from './components/Payment/Payment';
 import SignIn from './SignIn';
 import Slider from './slider';
 
@@ -32,6 +33,8 @@ function App() {
             <Route exact path='/Slider' element={<Slider/>} />
 
             <Route exact path='/Donate' element={<Donate/>} />
+
+            <Route exact path='/Payment' element={<Payment/>} />
           
           </Routes>
     <Slider/>
