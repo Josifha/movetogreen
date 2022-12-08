@@ -7,6 +7,16 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import first from "./images/3.jpg"
+import four from "./images/4.jpg"
+import seven from "./images/7.jpg"
+import eight from "./images/8.jpg"
+import nine from "./images/12.jpg"
+import nin from "./images/9.png"
+import ten from "./images/10.jpg"
+import Table from 'react-bootstrap/Table';
+import {Link} from "react-router-dom";
+import './Login.css';
 
 function Home(){
   const [index, setIndex] = useState(0);
@@ -23,37 +33,39 @@ function Home(){
         <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://www.greentnmission.com/webAssets/images/banner/banner1.jpg"
-          alt="First slide"
+          src={first}
+          alt="first Slide"
         />
         <Carousel.Caption>
-          <h3>Save your planet</h3>
-          <button>Plant a Tree</button>
+          <h3>1.18 Crore seedlings have been raised in forest department nurseries</h3>
+           <div className="text-center mt-3">
+           <button variant="primary"><Link to="/Login">Donate Now</Link></button>   
+          </div>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://www.greentnmission.com/webAssets/images/banner/banner2.jpg"
+          src={four}
           alt="Second slide"
         />
 
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3 >Soil and Moisture Conservation</h3>
+          <p>Soil and Moisture Conservation works of various types for sediment retention and erosion control</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://www.greentnmission.com/webAssets/images/banner/banner3.jpg"
+          src= "https://www.greentnmission.com/webAssets/images/banner/banner3.jpg"
           alt="Third slide"
         />
 
         <Carousel.Caption>
-          <h3>Third slide label</h3>
+          <h3>Disaster management</h3>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          Forest Fire Protection and Disaster Management for reducing emissions from the Deforestation and Land degradation.
           </p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -64,73 +76,96 @@ function Home(){
              <div className='IN'>
              <CardGroup>
       <Card>
-        <Card.Img variant="top" src="holder.js/100px160" />
+        <Card.Img variant="top" className = "modify-size" src={seven} />
         <Card.Body>
-          <Card.Title>Card title</Card.Title>
+          <Card.Title><stong>Working with communities</stong></Card.Title>
           <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
+          Community groups and NGOS are the early adopters of tree planting in the state. They have come together with the mission for encouraging everyone to plant trees. The communities will be encouraged to work out their carbon foot prints so that they can decide upon the number of trees to be planted.
           </Card.Text>
         </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
+        <Card.Footer className = "change-colour">
+          <small className="text-muted"> By @Monisha</small>
         </Card.Footer>
       </Card>
       <Card>
-        <Card.Img variant="top" src="holder.js/100px160" />
+        <Card.Img variant="top" className = "modify-size" src={eight} />
         <Card.Body>
-          <Card.Title>Card title</Card.Title>
+          <Card.Title>Tree aware future</Card.Title>
           <Card.Text>
-            This card has supporting text below as a natural lead-in to
-            additional content.{' '}
+          A generation of children with tree awareness is targeted under the mission. Every child will be encouraged to plant trees and care for it. The GTM nurseries will be open for schools and public so that they will be able to have a hands-on experience in raising seedlings. Every child needs to grow up with their tree and will pledge for its protection.
           </Card.Text>
         </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
+        <Card.Footer className = "change-colour">
+          <small className="text-muted">By @Josifha</small>
+        </Card.Footer>
+      </Card>
+      <Card >
+        <Card.Img variant="top" className = "modify-size" src={nine} />
+        <Card.Body>
+          <Card.Title>A mission going paperless</Card.Title>
+          <Card.Text>
+          The stakeholders and staff with great amount of passion and dedication have been able to make the mission paperless. Since the mission being a massive one, reducing paper helps in saving large number of existing green cover in the country 
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer className = "change-colour">
+          <small className="text-muted">By @Bunny</small>
         </Card.Footer>
       </Card>
       <Card>
-        <Card.Img variant="top" src="holder.js/100px160" />
+        <Card.Img variant="top" className = "modify-size" src={ten} />
         <Card.Body>
-          <Card.Title>Card title</Card.Title>
+          <Card.Title>GREEN QR PAYMENT</Card.Title>
           <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This card has even longer content than the
-            first to show that equal height action.
-          </Card.Text>
+          <p>Green Donation QR code payments an easy option to offer, they can be safe, fast, and attractive to everyone</p>
+          <strong>Shopping Malls</strong> <br /> 
+                         <strong>Theatre</strong> <br /> 
+                         <strong>Nursery</strong> <br /> 
+                         <strong>schools & colleges</strong> <br />  
+                         <strong>Airport</strong><br />      
+                         
+         </Card.Text>
         </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer>
-      </Card>
-      <Card>
-        <Card.Img variant="top" src="holder.js/100px160" />
-        <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This card has even longer content than the
-            first to show that equal height action.
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
+        <Card.Footer className = "change-colour">
+          <small className="text-muted">By @aj</small>
         </Card.Footer>
       </Card>
     </CardGroup>
               </div>
               </div>
-
-              <div className='results'>
-             <div className='IN'>
-
-
-             </div>
-              </div>
-             
-              </div>
-             
+      <br/>
+      <Table striped bordered hover  className = "change" variant="Dark">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Plants</th>
+          <th>Ranking</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Mark</td>
+          <td>12000</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jacob</td>
+          <td>11000</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td >Larry</td>
+          <td>1000</td>
+          <td>3</td>
+        </tr>
+      </tbody>
+    </Table>   
 </div>
+</div>         
+
 
       
     );

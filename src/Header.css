@@ -2,17 +2,19 @@
      height: 60px;
      display: flex;
      align-items: center;
-     background-image: linear-gradient(to right,white,#0aa091);
+     background-image: linear-gradient(to right,rgb(249, 249, 249),rgb(156, 209, 147));
      position:sticky;
      top: 0;
      z-index: 100;
 }
 .header_logo{
-    width: 90px;
+    width: 70px;
+    height: 40px;
     object-fit: contain;
     margin:0 40px;
-    margin-top:8px;
+    margin-top:10px;
 }
+
 .header__search{
     display:flex;
     flex:1;
