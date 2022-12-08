@@ -1,0 +1,16 @@
+Demo Link - https://josifha.web.app/
+Note -  If the demo link not working please refresh Twice the page and it will work
+
+Payment Card Details
+
+Name - John Doe
+Card Number - 4111111111111111
+Expiry - 12/23
+CVV - 345
+
+You can verify the payments in the Localhost --> due to the testing environment only this verification is possible
+
+1. Enter the URL in the browser - https://cors-anywhere.herokuapp.com/corsdemo
+2. click request Acess to the demo server 
+3. npm start in VS code Terminal
+4. then you can check payment using the above credential
