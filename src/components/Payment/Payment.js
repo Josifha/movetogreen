@@ -62,11 +62,9 @@ export default function Payment() {
   }
   
   const getCardPaymentSignature = () => {
-
     const to_sign = http_method + url_path + salt + timestamp + access_key + secret_key + JSON.stringify(card_payment_data);
     const signature = CryptoJS.enc.Hex.stringify(CryptoJS.HmacSHA256(to_sign, secret_key));
     return CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(signature));
-
   };
 
   const card_payment_headers = {
@@ -88,9 +86,11 @@ export default function Payment() {
                 })
         .then(response => response.json())
         .then(response => {
-            console.log(response);
-            alert("Payment Successful!");
-            navigate('/'); 
+            if(response.data != null) {
+              console.log(response);
+              alert("Payment Successful!");
+              navigate('/'); 
+            }
         })
         .catch(err => console.error(err));
   };
