@@ -39,7 +39,7 @@ function Home(){
         <Carousel.Caption>
           <h3>1.18 Crore seedlings have been raised in forest department nurseries</h3>
            <div className="text-center mt-3">
-           <button variant="primary"><Link to="/Login">Donate Now</Link></button>   
+           <button variant="primary"><Link to="/Donate">Donate Now</Link></button>   
           </div>
         </Carousel.Caption>
       </Carousel.Item>

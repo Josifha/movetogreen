@@ -13,7 +13,6 @@
     "@testing-library/user-event": "^13.5.0",
     "bcryptjs": "^2.4.3",
     "bootstrap": "^5.2.3",
-<<<<<<< HEAD
     "cookieparser": "^0.1.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
@@ -25,11 +24,9 @@
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.20",
-=======
     "crypto-js": "^4.1.1",
     "jquery": "^3.6.1",
     "mdb-react-ui-kit": "^5.0.0",
->>>>>>> f2f92c75442136a2cb7a06b2e94eb02c75eee894
     "react": "^18.2.0",
     "react-bootstrap": "^2.6.0",
     "react-dom": "^18.2.0",

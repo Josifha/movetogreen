@@ -2,11 +2,8 @@
      height: 60px;
      display: flex;
      align-items: center;
-<<<<<<< HEAD
+
      background-image: linear-gradient(to right,rgb(249, 249, 249),rgb(156, 209, 147));
-=======
-     background-image: linear-gradient(to right,white, #43A047);
->>>>>>> f2f92c75442136a2cb7a06b2e94eb02c75eee894
      position:sticky;
      top: 0;
      z-index: 100;
