@@ -77,10 +77,11 @@ export default function Payment() {
   };
 
   async function handleCardPayment() {
-    await fetch('https://sandboxapi.rapyd.net' + url_path, 
+    await fetch('https://cors-anywhere.herokuapp.com/https://sandboxapi.rapyd.net' + url_path, 
                 { 'Content-Type': 'application/json',
                   method: http_method,
                   headers: card_payment_headers,
+                  'mode':"cors",
                   'body': JSON.stringify(card_payment_data)
                 })
         .then(response => response.json())
