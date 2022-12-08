@@ -67,6 +67,10 @@
   border-color: #4CAF50;
 }
 
+.debitCard_PaymentType {
+  display: none; 
+}
+
 h4 {
     color: #4CAF50;
     font-family: "Roboto", sans-serif;
